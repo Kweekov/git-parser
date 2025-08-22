@@ -472,7 +472,7 @@ function App() {
                 />
                 <div className="flex-1">
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
-                    <div>
+      <div>
                       <h1 className="text-2xl font-semibold text-white mb-1">
                         {userData.name || userData.login}
                       </h1>
@@ -505,8 +505,8 @@ function App() {
                         <LinkIcon className="w-4 h-4" />
                         <a href={userData.blog} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
                           {userData.blog}
-                        </a>
-                      </div>
+        </a>
+      </div>
                     )}
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
@@ -720,7 +720,7 @@ function App() {
                     className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
                   >
                     Удалить
-                  </button>
+        </button>
                 )}
               </div>
             </form>
@@ -728,8 +728,8 @@ function App() {
             <div className="mt-4 p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
               <p className="text-yellow-400 text-xs">
                 💡 Токен сохраняется локально в браузере и не передаётся третьим лицам
-              </p>
-            </div>
+        </p>
+      </div>
           </motion.div>
         </div>
       )}
