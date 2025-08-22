@@ -311,27 +311,27 @@ function App() {
       {/* Хедер */}
       <header className="relative z-10 border-b border-gray-700/50 bg-gray-800/50 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-0 sm:justify-between">
             <div className="flex items-center gap-3">
-              <Github className="w-8 h-8 text-white" />
-              <h1 className="text-2xl font-semibold text-white">GitHub Analytics</h1>
+              <Github className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              <h1 className="text-xl sm:text-2xl font-semibold text-white">GitHub Analytics</h1>
               {rateLimitInfo && (
-                <div className="hidden sm:flex items-center gap-2 text-sm text-gray-400">
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-400">
                   <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
                   <span>API: {rateLimitInfo.remaining}/{rateLimitInfo.limit}</span>
                 </div>
               )}
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center justify-center gap-2">
               {/* Кнопка настройки токена */}
               <motion.button
                 onClick={() => setShowTokenModal(true)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-3 py-2 border border-gray-600 rounded-lg text-sm font-medium text-gray-300 bg-gray-700/50 hover:bg-gray-600/50 backdrop-blur-sm transition-all duration-200"
+                className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 border border-gray-600 rounded-lg text-xs sm:text-sm font-medium text-gray-300 bg-gray-700/50 hover:bg-gray-600/50 backdrop-blur-sm transition-all duration-200"
                 title="Настроить GitHub токен"
               >
-                <Settings className="w-4 h-4" />
+                <Settings className="w-3 h-3 sm:w-4 sm:h-4" />
               </motion.button>
               
               {userData && (
@@ -340,28 +340,28 @@ function App() {
                     onClick={() => setShowResults(false)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center px-3 py-2 border border-gray-600 rounded-lg text-sm font-medium text-gray-300 bg-gray-700/50 hover:bg-gray-600/50 backdrop-blur-sm transition-all duration-200"
+                    className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 border border-gray-600 rounded-lg text-xs sm:text-sm font-medium text-gray-300 bg-gray-700/50 hover:bg-gray-600/50 backdrop-blur-sm transition-all duration-200"
                   >
-                    <Search className="w-4 h-4 mr-2" />
-                    Новый поиск
+                    <Search className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                    <span className="hidden xs:inline">Новый поиск</span>
                   </motion.button>
                   <motion.button
                     onClick={shareProfile}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center px-3 py-2 border border-blue-500/50 rounded-lg text-sm font-medium text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 backdrop-blur-sm transition-all duration-200"
+                    className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 border border-blue-500/50 rounded-lg text-xs sm:text-sm font-medium text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 backdrop-blur-sm transition-all duration-200"
                   >
-                    <Share2 className="w-4 h-4 mr-2" />
-                    Поделиться
+                    <Share2 className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                    <span className="hidden xs:inline">Поделиться</span>
                   </motion.button>
                   <motion.button
                     onClick={downloadData}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center px-3 py-2 border border-green-500/50 rounded-lg text-sm font-medium text-green-400 bg-green-500/10 hover:bg-green-500/20 backdrop-blur-sm transition-all duration-200"
+                    className="inline-flex items-center px-2 sm:px-3 py-1.5 sm:py-2 border border-green-500/50 rounded-lg text-xs sm:text-sm font-medium text-green-400 bg-green-500/10 hover:bg-green-500/20 backdrop-blur-sm transition-all duration-200"
                   >
-                    <Download className="w-4 h-4 mr-2" />
-                    Скачать
+                    <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                    <span className="hidden xs:inline">Скачать</span>
                   </motion.button>
                 </>
               )}
